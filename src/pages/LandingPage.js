@@ -32,10 +32,12 @@ const LandingPage = (props) => {
   const [explanations, setExplanations] = useState()
 
   useEffect(()=>{
-    api.get('/explanation')
+    api.get('/myapi/fact_check?'+ new URLSearchParams({
+      claim: 'Arson is the reason for Bushfire'
+  }))
       .then(async response=>{
         response = await response.json()
-        setExplanations(response.explanation)
+        setExplanations(response.explanations)
       })
   }, [])
 
