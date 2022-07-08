@@ -12,7 +12,8 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
-import LoadingButton from '@mui/material/Button';
+import LoadingButton from '@mui/lab/LoadingButton';
+
 
 const api = require("../api.js");
 
