@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = [{title: <><p>Generate Explanation</p><p> (soon)</p></>, disabled: true}, {title: 'Fact Checker', disabled: false}];
+const navItems = [{title: <><p>ChatBot</p><p> (soon)</p></>, disabled: true}, {title: 'Fact Checker', disabled: false}];
 
 export default function DrawerAppBar(props) {
   const { window } = props;
