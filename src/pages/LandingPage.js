@@ -42,7 +42,7 @@ const LandingPage = (props) => {
 
   const [explanations, setExplanations] = useState()
   const [evidences, setEvidences] = useState()
-  // const [mode, setMode] = useState("generate")
+  const [mode, setMode] = useState("generate")
 
   // Button 1
   const [loading, setLoading] = useState(false)
@@ -63,7 +63,7 @@ const LandingPage = (props) => {
     setLoading(true)
     api.get('/myapi/fact_check?'+ new URLSearchParams({
       claim:claim,
-      mode:"generate"
+      mode:mode
   }))
       .then(async response=>{
         response = await response.json()
@@ -112,7 +112,7 @@ const LandingPage = (props) => {
             <div style={{ textAlign:"center"}}>
                   <Typography variant="h4" gutterBottom component="div">FACT CHECKER</Typography>
                   <br/><br/>
-                  {/* <FormControl>
+                  <FormControl>
                     <FormLabel id="mode">Mode</FormLabel>
                     <RadioGroup
                       row
@@ -121,10 +121,10 @@ const LandingPage = (props) => {
                       value={mode}
                       onChange={(e)=>setMode(e.target.value)}
                     >
-                      <FormControlLabel value="generate" control={<Radio />} label="Generate" />
-                      <FormControlLabel value="summarize" control={<Radio />} label="Summarize" />
+                      <FormControlLabel value="google" control={<Radio />} label="Google API" />
+                      <FormControlLabel value="stored" control={<Radio />} label="Stored Corpus" />
                     </RadioGroup>
-                  </FormControl> */}
+                  </FormControl>
                   <TextField error={textError !== null} helperText={textError} value={claim} id="claim" label="Claim" variant="outlined" fullWidth  onChange={(e)=>handleChange(e.target.value)} />
                   <br/><br/>
                   {buttonOneVisible && 
