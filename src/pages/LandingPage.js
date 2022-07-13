@@ -17,7 +17,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import Zoom from '@mui/material/Zoom';
 import { v4 as uuidv4 } from 'uuid';
 import Grid from '@mui/material/Grid';
-
+import Link from '@mui/material/Link';
 const api = require("../api.js");
 
 
@@ -150,10 +150,13 @@ const LandingPage = (props) => {
                         <Grid item md={1}></Grid>
 
                         <Grid item md={1}></Grid>
-                        <Grid item md={4} style={{backgroundColor:"#755139", padding:"10px", color:"#ffffff", boxShadow: "10px 10px 10px grey"}}>
+                        <Grid item md={4} style={{backgroundColor:"#755139", padding:"10px", boxShadow: "10px 10px 10px grey", textAlign:"left"}}>
                               {evidences.map(evidence=>
                                 <Typography key={uuidv4()} variant="subtitle2" gutterBottom component="div" style={{marginBottom:"15px", color:"#f3edd7"}}>
-                                {evidence}
+                                
+                                <Link href={evidence.url} underline="hover" style={{"cursor":"pointer", color:"#ffffff"}}>
+                                  {evidence.title}
+                                </Link>
                                 </Typography>
                               )}
                         </Grid>
