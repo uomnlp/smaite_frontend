@@ -18,6 +18,7 @@ import Zoom from '@mui/material/Zoom';
 import { v4 as uuidv4 } from 'uuid';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import Slide from '@mui/material/Slide';
 const api = require("../api.js");
 
 
@@ -43,6 +44,7 @@ const LandingPage = (props) => {
   const [explanations, setExplanations] = useState()
   const [evidences, setEvidences] = useState()
   const [mode, setMode] = useState("generate")
+  const [msg, setMsg] = useState({status:"", text:""})
 
   // Button 1
   const [loading, setLoading] = useState(false)
@@ -67,14 +69,26 @@ const LandingPage = (props) => {
   }))
       .then(async response=>{
         response = await response.json()
-        setExplanations(response.explanations)
-        setEvidences(response.evidence)
+        if(response.status === "success"){
+          setExplanations(response.explanations)
+          setEvidences(response.evidence)
+          setLoading(false)
+          setButtonOneVisible(false)
+          setMsg({text:"Output generated.", status:"success"})
+        }else{
+          // set the error
+          setMsg({text:response.status, status:"error"})
+        }
+      })
+      .catch(err =>{
         setLoading(false)
-        setButtonOneVisible(false)
+        setButtonOneVisible(true)
+        setMsg({text:"Something went wrong.", status:"error"})
       })
   }
 
   const checkRelevantFacts = () => {
+    setMsg({text:"", status:""})
     setLoading(true)
     setExplanations()
     setRelevantFacts(null)
@@ -101,6 +115,7 @@ const LandingPage = (props) => {
     else if(value.length > 50) setTextError("Claim should be at max 50 characters long")
     else setTextError(null)
     setClaim(value)
+    setMsg({text:"", status:""})
   }
 
     return (
@@ -111,6 +126,14 @@ const LandingPage = (props) => {
           <Container fixed style={{border:"solid 1px black", padding:50,borderRadius: "15px", margin:"20px"}}>
             <div style={{ textAlign:"center"}}>
                   <Typography variant="h4" gutterBottom component="div">FACT CHECKER</Typography>
+                  <br/><br/>
+                  <Slide direction="up" in={msg.status} mountOnEnter unmountOnExit>
+                    <Alert icon={false} severity={msg.status}>
+                      {msg.text}
+                    </Alert>
+                  </Slide>
+                  <br/><br/>
+                  <TextField error={textError !== null} helperText={textError} value={claim} id="claim" label="Claim" variant="outlined" fullWidth  onChange={(e)=>handleChange(e.target.value)} />
                   <br/><br/>
                   <FormControl>
                     <FormLabel id="mode">Mode</FormLabel>
@@ -125,7 +148,6 @@ const LandingPage = (props) => {
                       <FormControlLabel value="stored" control={<Radio />} label="Stored Corpus" />
                     </RadioGroup>
                   </FormControl>
-                  <TextField error={textError !== null} helperText={textError} value={claim} id="claim" label="Claim" variant="outlined" fullWidth  onChange={(e)=>handleChange(e.target.value)} />
                   <br/><br/>
                   {buttonOneVisible && 
                     <Zoom in={buttonOneVisible}>
@@ -154,7 +176,7 @@ const LandingPage = (props) => {
                               {evidences.map(evidence=>
                                 <Typography key={uuidv4()} variant="subtitle2" gutterBottom component="div" style={{marginBottom:"15px", color:"#f3edd7"}}>
                                 
-                                <Link href={evidence.url} underline="hover" style={{"cursor":"pointer", color:"#ffffff"}}>
+                                <Link href={evidence.link} underline="hover" style={{"cursor":"pointer", color:"#ffffff"}}>
                                   {evidence.title}
                                 </Link>
                                 </Typography>
