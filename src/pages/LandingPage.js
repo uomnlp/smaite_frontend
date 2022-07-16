@@ -63,7 +63,7 @@ const LandingPage = (props) => {
     setButtonOneVisible(true)
     setButtonTwoVisible(false)
     setLoading(true)
-    api.get('/api/myapi/fact_check?'+ new URLSearchParams({
+    api.get('/api/fact_check?'+ new URLSearchParams({
       claim:claim,
       mode:mode
   }))
