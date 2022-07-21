@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## <img src="http://raw.githubusercontent.com/aditya-5/aditya-5/master/wave.gif" width="30px"> Welcome to the SMAITE project! ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=aditya-5.smaite_frontend)
 
-## Available Scripts
+<img  alt="GIF"   src="https://github.com/aditya-5/aditya-5/blob/main/code.gif?raw=true" width="500" height="320" />
 
-In the project directory, you can run:
+<br><br>
+Assessing the veracity of claims is a vital capability in the modern world, but it is a task that the public is often ill-equipped to do. This is evidenced, for example, in debates around human contribution to climate change, public health policies and political elections. As a result of targeted disinformation campaigns, many users are inadvertently spreading misinformation, without critically reflecting about its sources, as the information is often presented without further context. As experts cannot provide contextualising explanations about the validity of a claim instantaneously, this gives the opportunity to research into automated claim and fact verification approaches.
 
-### `npm start`
+This tool mimics the work of fact verification journalists, such as those from Full Fact, by generating articles that explain why a claim might be false in human-understandable terms.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The tool is being developed by Aditya Agarwal [![Linkedin Badge](https://img.shields.io/badge/--0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/aditya-5/)](https://www.linkedin.com/in/aditya-5/) under the supervision of Viktor Schlegel [![Linkedin Badge](https://img.shields.io/badge/--0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=https://uk.linkedin.com/in/viktor-schlegel-585a59172)](https://uk.linkedin.com/in/viktor-schlegel-585a59172) and Riza theresa Batista-navarro [![Linkedin Badge](https://img.shields.io/badge/--0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=https://uk.linkedin.com/in/rbbatista)](https://uk.linkedin.com/in/rbbatista) at [The Univesity of Manchester](https://www.manchester.ac.uk/). 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<hr>
 
-### `npm run build`
+## ⚡ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
+![Flask](https://img.shields.io/badge/Flask-yellow?style=flat-square&logo=flask&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Heroku](https://img.shields.io/badge/-Heroku-430098?style=flat-square&logo=heroku)
+![Digital Ocean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=flat-square&logo=DigitalOcean&logoColor=white)
+![AWS](https://img.shields.io/badge/Amazon_AWS-FFA500?style=flat-square&logo=amazon-aws&logoColor=black)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=flat-square&logo=material-ui&logoColor=white)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<hr>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚡ Compiling and Running
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run in development mode, use <br>
+`REACT_APP_ENV=dev npm start`
 
-## Learn More
+To build for production mode, use <br>
+`npm run build`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<hr>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚡ Demo
 
-### Code Splitting
+A demo is worth a thousand words - 
+[www.smaite.tech](www.smaite.tech)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br><br>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
