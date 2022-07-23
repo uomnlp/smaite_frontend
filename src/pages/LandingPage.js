@@ -142,7 +142,7 @@ const LandingPage = (props) => {
                       aria-labelledby="mode"
                       name="mode"
                       value={mode}
-                      onChange={(e)=>setMode(e.target.value)}
+                      onChange={(e)=>{setMode(e.target.value); setButtonOneVisible(true)}}
                     >
                       <FormControlLabel value="google" control={<Radio />} label="Google API" />
                       <FormControlLabel value="stored" control={<Radio />} label="Stored Corpus" />
